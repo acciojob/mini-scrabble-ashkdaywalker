@@ -8,6 +8,23 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<label for="evaluatedText">Enter Your Word : </label>
+	<input type="text" id="evaluatedText" name="evaluatedText">
+	<h3 id="letterCount">0</h3>
+	<script>
+		let evaluatedText = document.getElementById("evaluatedText");
+		let letterCount = document.getElementById("letterCount");
+		evaluatedText.addEventListener("input" , calculateLength)
+	
+		function calculateLength(){
+			let word = evaluatedText.value;
+			let wordLength = word.length;
+			letterCount.innerHTML = wordLength;
+		}
+	</script>
+	
+
+
     <script type="text/javascript" src="./script.js">
 </script>
 
